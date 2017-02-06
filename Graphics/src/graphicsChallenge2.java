@@ -23,7 +23,6 @@ public class graphicsChallenge2 extends Canvas
 			}
 		public void paint(Graphics graphics)
 		{
-			
 			for(int i = 0; i < 500; i++)
 				{
 					graphics.setColor(Color.blue);
