@@ -23,9 +23,32 @@ public class graphicsChallenge2 extends Canvas
 			}
 		public void paint(Graphics graphics)
 		{
-			Square = new Scanner(System.in);
-			System.out.println("How big would you like your square");
-			Square.nextInt();			
+			
+			for(int i = 0; i < 500; i++)
+				{
+					graphics.setColor(Color.blue);
+					graphics.fillRect(i, i, 500, 500);
+					
+					graphics.setColor(Color.white);
+					graphics.fillRect(i, i, 500, 500);
+				}
+			for(int i = 0; i < 500; i++)
+				{
+					graphics.setColor(Color.red);
+					graphics.fillRect(i, i, 100, 100);
+					
+					graphics.setColor(Color.white);
+					graphics.fillRect(i, i, 100, 100);
+				}
 		}
-
+		public void delay()
+		{
+			try
+				{
+					Thread.sleep(100);
+				} catch (InterruptedException e)
+				{
+			    e.printStackTrace();
+				}
+		}
 	}
