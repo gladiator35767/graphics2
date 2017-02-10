@@ -8,12 +8,13 @@ public class graphicsChallenge2 extends Canvas
 		static Scanner Square;
 		static int Size;
 		static Scanner shapeColor;
-		static int setColor;
+		static String setColor;
 		static int x = 100;
 		static int speed = 3;
 
 		public static void main(String[] args)
 			{
+				scanner();
 				graphicsChallenge2 canvas = new graphicsChallenge2();
 		        JFrame frame = new JFrame();
 		        frame.setSize(1000, 1000);
@@ -23,10 +24,36 @@ public class graphicsChallenge2 extends Canvas
 		        frame.setResizable(true);
 		        frame.setVisible(true);	
 			}
+		public static void scanner()
+		{
+			Square = new Scanner(System.in);
+			System.out.println("What would you like the size of"
+					+ " the your square to be?(Maximum 999)");
+			Size = shapeColor.nextInt();
+			
+			Square = new Scanner(System.in);
+			System.out.println("Between red and blue which color would"
+					+ " you like your square to be? (red or blue)");
+			setColor = shapeColor.nextLine();
+		}
+		public void one(Graphics graphics)
+		{
+			if(setColor.equals("red"))
+				{
+					graphics.setColor(Color.red);
+					graphics.fillRect(0, 0, Size, Size);
+				}
+			if(setColor.equals("blue"))
+				{
+					graphics.setColor(Color.blue);
+					graphics.fillRect(0, 0, Size, Size);
+				}
+			
+		}
+		
+		
 		public void paint(Graphics graphics)
 		{
-			
-
         while(true)
         	{
 			x = x + speed;
