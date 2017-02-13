@@ -29,11 +29,13 @@ public class graphicsChallenge2 extends Canvas
 			Square = new Scanner(System.in);
 			System.out.println("What would you like the size of"
 					+ " the your square to be?(Maximum 999)");
+			shapeColor = new Scanner(System.in);
 			Size = shapeColor.nextInt();
 			
 			Square = new Scanner(System.in);
 			System.out.println("Between red and blue which color would"
 					+ " you like your square to be? (red or blue)");
+			
 			setColor = shapeColor.nextLine();
 		}
 		public void one(Graphics graphics)
@@ -66,7 +68,7 @@ public class graphicsChallenge2 extends Canvas
 					graphics.setColor(Color.white);
 					graphics.fillRect(x, 20, 20, 20);
 					
-			if(x > 970 || x < 0)
+			if(x > 980 || x < 0)
 				speed = -speed;
 			
         	}	
